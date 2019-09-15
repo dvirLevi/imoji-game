@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Crazy imoji | משחק אימוג'ים ממכר </title>
+    <link rel="icon" href="img/smill.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/style.css">
+    <!-- <script src="https://kit.fontawesome.com/c82c9241f9.js"></script> -->
+</head>
+
+<body>
+
+    <div id="wrapGame" class="center-all wrap-all">
+        <div id="bar" class="w-100 center-between p-3">
+            <div id="hamburger" class="center-all hamburger">
+                <!-- <i  class="fas fa-bars h1"></i> -->
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="center-all w-75">
+                <div class="center-all w-50">
+                    <p class="m-0 h4">ניקוד: <span class="score"></span></p>
+                </div>
+                <div class="center-all w-50">
+                    <img class="w-25" src="img/smill.png" alt="">
+                    <div class="w-75 p-2">
+                        <div class="w-100 border">
+                            <div class="progress-life" id="progressLife"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 center-all content-butt">
+            <div class="center-all">
+                <div class="w-100 center-all">
+                    <div class="butt center-all" id="myUpBtn">&uarr;</div>
+                </div>
+                <div class="w-100 center-all">
+                    <div class="butt center-all" id="myRightBtn">&rarr;</div>
+                    <div class="butt center-all" id="myLeftBtn">&larr;</div>
+                </div>
+                <div class="w-100 center-all">
+                    <div class="butt center-all" id="myDownBtn">&darr;</div>
+                </div>
+            </div>
+        </div>
+        <div id="openScreen" class="wrap-modals bg-white">
+            <div class="open-screen center-all">
+                <img class="w-100" src="img/open.png" alt="">
+            </div>
+        </div>
+        <div id="menu" class="bg-menu">
+            <div class="menu center-all">
+                <div class="w-100">טבלת שיאים</div>
+                <div class="w-100">הוראות</div>
+            </div>
+        </div>
+        <!-- <div  class="wrap-modals"> -->
+            <div id="modalScore" class="bg-menu center-all">
+                <div class="content-modal center-all p-2">
+                    <div class="w-100 text-right h3"><span id="closeModalScore" class="text-secondary">x</span></div>
+                    <p class="w-100 h3 text-center">המשחק הסתיים!</p>
+                    <p class="w-100 h4 text-center">ניקוד: <span class="score"></span></p>
+                    <p class="w-100 h4 text-center">רוצה להכנס לטבלת השיאים?</p>
+                    <form>
+                        <div class="center-all w-100">
+                            <input id="namePlayer" class="" type="text" placeholder="שם" required>
+                        </div>
+                        <div class="center-all w-100">
+                            <!-- <button id="closeModalScore">סגור</button> -->
+                            <button class="all-butt h5">הוסף לטבלה</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <!-- </div> -->
+        <div id="wrapButtStart" class="wrap-modals">
+            <div class="wrap-modals center-all">
+                <div class="all-butt h2" id="startGame">התחל משחק</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <script src="dragdroptouch-master/DragDropTouch.js"></script> -->
+    <script src="js/script.js" type="module"></script>
+</body>
+
+</html>

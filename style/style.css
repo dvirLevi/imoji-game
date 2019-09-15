@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Assistant:300,400,700&display=swap'); */
+
+html, body {
+    font-family: 'Rubik', sans-serif;
+    /* font-family: 'Assistant', sans-serif; */
+    direction: rtl;
+    --color-button-text-modal: #ff8845;
+}
+
+.wrap-all {
+    width: min-content;
+    margin: 0 auto;
+    position: relative;
+    /* width : 450;
+    height : 800; */
+}
+
+canvas {
+    /* border: solid #dadada 1px; */
+    background-color: rgba(250, 250, 250, 0.527);
+    margin: 0 auto;
+    /* width: 680px; */
+}
+
+.content-butt {
+    position: absolute;
+    bottom: 0;
+}
+
+.center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.center-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.butt {
+    font-size: 39px;
+    color: rgba(0, 0, 0, 0.38);
+    font-weight: bold;
+    width: 27px;
+    height: 27px;
+    border: none;
+    user-select: none;
+}
+
+.progress-life {
+    background-color: #ff8845;
+    height: 10px;
+}
+
+.bg-menu {
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.192);
+    z-index: 2;
+}
+
+.open-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 5;
+}
+
+.wrap-modals {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    width: 45%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    padding: 5px;
+}
+
+.menu div{
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    padding: 10px;
+    border-bottom: solid rgb(165, 165, 165) 1px;
+    pointer-events: none;
+}
+
+.menu div:last-child {
+    border-bottom: none;
+}
+
+.content-modal {
+width: 90%;
+background-color: #ffffff;
+position: relative;
+border-radius: 5px;
+z-index: 1;
+/* pointer-events: none; */
+}
+
+.content-modal::after {
+    background-size: 42%;
+    background-position: center;
+    content: "";
+    background-image: url(/game-ball/img/party.png);
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+
+    }
+
+.content-modal p{
+   color: var(--color-button-text-modal);
+    }
+
+.hamburger {
+    width: 40px;
+    position: relative;
+    z-index: 5;
+}
+
+.hamburger div {
+    background-color: black;
+    width: 100%;
+    margin: 3px;
+    height: 6px;
+}
+
+input {
+    border: solid var(--color-button-text-modal) 2px;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.all-butt {
+    border: none;
+    background-color: var(--color-button-text-modal);
+    color: #ffffff;
+    /* font-size: 20px; */
+    margin: 10px;
+    padding: 5px;
+}
+
+
+@media (max-width: 767.98px) {
+    .wrap-all {
+       min-width : 100%;
+       min-height : 100%;
+    }
+}
