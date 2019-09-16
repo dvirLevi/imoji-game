@@ -63,7 +63,16 @@ canvas {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.192);
-    z-index: 2;
+    /* z-index: 5; */
+    overflow: auto;
+}
+
+.zindex5 {
+    z-index: 5;
+}
+
+.zindex7 {
+    z-index: 7;
 }
 
 .open-screen {
@@ -71,7 +80,7 @@ canvas {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
-    z-index: 5;
+    z-index: 6;
 }
 
 .wrap-modals {
@@ -86,6 +95,7 @@ canvas {
     background-color: rgb(255, 255, 255);
     flex-direction: column;
     padding: 5px;
+    cursor: pointer;
 }
 
 .menu div{
@@ -94,7 +104,7 @@ canvas {
     font-size: 25px;
     padding: 10px;
     border-bottom: solid rgb(165, 165, 165) 1px;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .menu div:last-child {
@@ -114,7 +124,7 @@ z-index: 1;
     background-size: 42%;
     background-position: center;
     content: "";
-    background-image: url(/game-ball/img/party.png);
+    background-image: url(/client/img/party.png);
     background-repeat: no-repeat;
     opacity: 0.3;
     top: 0;
@@ -133,7 +143,7 @@ z-index: 1;
 .hamburger {
     width: 40px;
     position: relative;
-    z-index: 5;
+    z-index: 6;
 }
 
 .hamburger div {
@@ -156,6 +166,12 @@ input {
     /* font-size: 20px; */
     margin: 10px;
     padding: 5px;
+}
+
+.table div{
+    width: 50%;
+    text-align: center;
+    font-size: 18px
 }
 
 

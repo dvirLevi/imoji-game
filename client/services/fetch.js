@@ -2,8 +2,8 @@
 const url = 'http://localhost:3000/';
 
 
-const fetchServce = {
-    sendScore(obj){
+const fetchService = {
+    sendScore(obj) {
         return new Promise(async (resolve, reject) => {
             try {
                 const objtojson = JSON.stringify(obj);
@@ -21,7 +21,18 @@ const fetchServce = {
                 reject(err)
             }
         })
-    }
+    },
+    getScore() {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const response = await fetch(url + 'get-score');
+                const json = await response.json();
+                resolve(json)
+            } catch (err) {
+                reject(err)
+            }
+        })
+    },
 }
 
-export default fetchServce
+export default fetchService

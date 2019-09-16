@@ -11,8 +11,7 @@ const openGame = () => {
     setTimeout(() => {
         const openScreen = document.getElementById('openScreen');
         eventAndToggle.addToggle(openScreen)
-    }, 3000);
-    // alert()
+    }, 6000);
     initalGameAll()
 }
 
@@ -24,26 +23,33 @@ const initalGameAll = () => {
     const startGame = document.getElementById('startGame');
     const formScore = document.querySelector('form');
     const wrapButtStart = document.getElementById('wrapButtStart');
+    const openTable = document.getElementById('openTable');
+    const modalTableScore = document.getElementById('modalTableScore');
+    const closeModalTable = document.getElementById('closeModalTable');
+    
     score.innerScore(0);
     progressLife.innerWidth(100);
     eventAndToggle.addEvent(hamburger, menu);
+    eventAndToggle.addEvent(openTable, modalTableScore);
+    eventAndToggle.addEvent(closeModalTable, modalTableScore);
     eventAndToggle.addEvent(menu, menu);
-    eventAndToggle.addEvent(closeModalScore, modalScore, 'none');
+    eventAndToggle.addEvent(closeModalScore, modalScore);
+    sendToServer.getScoreToTable();
     startGame.onclick = () => {
         wrapButtStart.style.display = 'none';
         initalGame.startGame();
     }
     formScore.onsubmit = (event) => {
         event.preventDefault();
-        sendToServer.sendScoreToServer()
+        sendToServer.sendScoreToServer();
+    sendToServer.getScoreToTable();
+        eventAndToggle.addToggle(modalScore);
     }
 }
 
-
-
-
 let initalGame = {
     startGame() {
+        this.clearGame();
         const myUpBtn = document.getElementById('myUpBtn');
         const myDownBtn = document.getElementById('myDownBtn');
         const myLeftBtn = document.getElementById('myLeftBtn');
@@ -53,6 +59,13 @@ let initalGame = {
         this.addEventToBtn(myLeftBtn, 'X', -0.5, -5, 0)
         this.addEventToBtn(myRightBtn, 'X', 0.5, 5, 0)
         myGameArea.intervalGame()
+    },
+    clearGame(){
+        progressLife.width = 100;
+        progressLife.innerWidth(0);
+        score.numScore = 0;
+        score.innerScore(0);
+        initalParticles.arrPlayerBad = [];
     },
     addEventToBtn(el, axis, gravity, run, stop) {
         el.onclick = () => {
@@ -160,11 +173,6 @@ let myGameArea = {
             clearInterval(this.interval);
             eventAndToggle.addToggle(modalScore);
             wrapButtStart.style.display = 'block';
-            progressLife.width = 100;
-            progressLife.innerWidth(0);
-            // score.numScore = 0;
-            // score.innerScore(0);
-            initalParticles.arrPlayerBad = [];
         }
     },
     updateGameArea() {
@@ -300,9 +308,7 @@ class badPlayerGame {
                 }
                 progressLife.innerWidth(-5)
             } else {
-
                 this.drawPlayer();
-                // myGamePiece.image.src = './img/sed.png'
             }
             this.testOne = 1;
         }
@@ -457,5 +463,4 @@ class drowParticles {
     }
 
 }
-// initalGameAll()
 openGame();

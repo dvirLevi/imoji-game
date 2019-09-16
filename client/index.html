@@ -57,31 +57,37 @@
                 <img class="w-100" src="img/open.png" alt="">
             </div>
         </div>
-        <div id="menu" class="bg-menu">
+        <div id="menu" class="bg-menu zindex5">
             <div class="menu center-all">
-                <div class="w-100">טבלת שיאים</div>
+                <div id="openTable" class="w-100">טבלת שיאים</div>
                 <div class="w-100">הוראות</div>
             </div>
         </div>
-        <!-- <div  class="wrap-modals"> -->
-            <div id="modalScore" class="bg-menu center-all">
-                <div class="content-modal center-all p-2">
-                    <div class="w-100 text-right h3"><span id="closeModalScore" class="text-secondary">x</span></div>
-                    <p class="w-100 h3 text-center">המשחק הסתיים!</p>
-                    <p class="w-100 h4 text-center">ניקוד: <span class="score"></span></p>
-                    <p class="w-100 h4 text-center">רוצה להכנס לטבלת השיאים?</p>
-                    <form>
-                        <div class="center-all w-100">
-                            <input id="namePlayer" class="" type="text" placeholder="שם" required>
-                        </div>
-                        <div class="center-all w-100">
-                            <!-- <button id="closeModalScore">סגור</button> -->
-                            <button class="all-butt h5">הוסף לטבלה</button>
-                        </div>
-                    </form>
+        <div id="modalScore" class="bg-menu zindex5 center-all">
+            <div class="content-modal center-all p-2">
+                <div class="w-100 text-right h3"><span id="closeModalScore" class="text-secondary">x</span></div>
+                <p class="w-100 h3 text-center">המשחק הסתיים!</p>
+                <p class="w-100 h4 text-center">ניקוד: <span class="score"></span></p>
+                <p class="w-100 h4 text-center">רוצה להכנס לטבלת השיאים?</p>
+                <form>
+                    <div class="center-all w-100">
+                        <input id="namePlayer" class="" type="text" placeholder="שם" required>
+                    </div>
+                    <div class="center-all w-100">
+                        <button id="addScoreButt" class="all-butt h5">הוסף לטבלה</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="modalTableScore" class="bg-menu zindex7 center-all">
+            <div class="content-modal center-all p-2">
+                <div class="w-100 text-right h3"><span id="closeModalTable" class="text-secondary">x</span></div>
+                <h4 class="w-100 h3 text-center">טבלת שיאים</h4>
+                <div id="table" class="center-all table">
+                    
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
         <div id="wrapButtStart" class="wrap-modals">
             <div class="wrap-modals center-all">
                 <div class="all-butt h2" id="startGame">התחל משחק</div>
