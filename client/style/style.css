@@ -124,7 +124,7 @@ z-index: 1;
     background-size: 42%;
     background-position: center;
     content: "";
-    background-image: url(/client/img/party.png);
+    background-image: url(./client/img/party.png);
     background-repeat: no-repeat;
     opacity: 0.3;
     top: 0;
