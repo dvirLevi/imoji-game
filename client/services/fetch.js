@@ -1,5 +1,5 @@
-// const url = 'https://answer-rambam.herokuapp.com/api/posts';
-const url = 'http://localhost:3000/';
+const url = 'https://imoji-game.herokuapp.com/';
+// const url = 'http://localhost:3000/';
 
 
 const fetchService = {
