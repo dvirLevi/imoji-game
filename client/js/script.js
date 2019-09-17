@@ -109,7 +109,7 @@ let initalGame = {
             }
         }
         el.ontouchstart = (e) => {
-            e.preventDefault()
+            e.preventDefault();
             if (axis === 'Y') {
                 myGamePiece.speedY = run;
                 myGamePiece.gravityY = gravity;
@@ -280,7 +280,7 @@ class badPlayerGame {
         this.x = x;
         this.y = y;
         this.ctx = myGameArea.context;
-        this.speedBoom = 4;
+        this.speedBoom = 6;
         this.testOne = 0
     }
     update() {
@@ -391,7 +391,7 @@ const initalParticles = {
         this.createNewBadPlayer();
     },
     createNewBadPlayer() {
-        if (this.counter > 100) {
+        if (this.counter > 80) {
             let id = this.idPlayer;
             let x = Math.floor(Math.random() * myGameArea.canvas.height / 2);
             let y = Math.floor(Math.random() * myGameArea.canvas.width / 2);
