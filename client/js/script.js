@@ -108,7 +108,8 @@ let initalGame = {
                 myGamePiece.speedX = stop;
             }
         }
-        el.ontouchstart = () => {
+        el.ontouchstart = (e) => {
+            e.preventDefault()
             if (axis === 'Y') {
                 myGamePiece.speedY = run;
                 myGamePiece.gravityY = gravity;
